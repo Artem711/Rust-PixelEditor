@@ -1,5 +1,4 @@
 use wasm_bindgen::prelude::*;
-use web_sys::console;
 
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
@@ -10,6 +9,7 @@ pub struct Image {}
 
 #[wasm_bindgen]
 impl Image {
+    #[wasm_bindgen(constructor)]
     pub fn new() -> Self {
         Self {}
     }
